@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int i = 0, s = 0, d, t, flag;
+    long int n;
+    scanf("%ld", &n);
+    while(n > 0){
+        d = n % 10;
+        switch(d){
+            case 1:{
+                t = pow(2,i);
+                s = s + (d*t);
+                n = n - d;
+                n = n / 10;
+                i = i + 1;
+                break;
+            }
+            case 0:{
+                t = pow(2,i);
+                s = s + (d*t);
+                n = n - d;
+                n = n / 10;
+                i = i + 1;
+                break;
+            }
+            default:
+                n = n - d;
+                n = n / 10;
+                flag = 1;
+                break;
+        }
+    }
+    if(flag != 1){
+        printf("%d", s);
+    }
+    else{
+        printf("Error! pls enter a valid binary no.");
+    }
+    return 0;
+}
