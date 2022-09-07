@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+void main() {
+    int a, b, x, i;
+    printf("Enter any two no.:");
+    scanf("%d %d", &a, &b);
+    printf("Enter the space between them:");
+    scanf("%d", &x);
+    printf("%d", a);
+    sspace(x);
+    printf("%d", b);
+}
+void sspace(int x){
+    int i;
+    for(i = 1; i <= x; i++){
+        printf(" ");
+    }
+    return(0);
+}
