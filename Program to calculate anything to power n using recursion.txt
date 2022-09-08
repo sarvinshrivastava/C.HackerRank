@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+void main() {
+    int pow = 1, n, k, k1;
+    printf("Enter a no.");
+    scanf("%d", &n);
+    printf("Enter the power to be raised:");
+    scanf("%d", &k);
+    k1 = k;
+    pow = power(n, pow, k);
+    printf("%d raised to the power %d is: %d", n, k, pow);
+}
+int power(int n, int pow, int k){
+    while(k > 0){
+        pow = pow * n;
+        //printf("%d\n", pow);
+        k--;
+        power(n, pow, k);
+    }
+    return(pow);
+}
