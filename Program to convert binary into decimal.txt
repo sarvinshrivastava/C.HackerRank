@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+void main() {
+    int n, k, i = 0, num = 0, d, j, g, flag = 0;
+    printf("Enter no. in binary form:");
+    scanf("%d", &n);
+    k = n;
+    while(n > 0){
+        d = n % 10;
+        n = n / 10;
+        i++;
+    }
+    for(j = 0; j <= i; j++){
+        d = k % 10;
+        if(d < 2){
+            g = pow(2, j);
+            //printf("%d", g);
+            num += d * g;
+            k /= 10;
+            flag = 0;
+        }
+        else{
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 0){
+        printf("Decimal form of is:%d", num);
+    }
+    else{
+        printf("Enter a valid binary no.");
+    }
+}
