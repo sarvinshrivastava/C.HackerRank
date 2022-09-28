@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    int i, j, k;
+    char *s, arr[50];
+    s = malloc(1024 * sizeof(char));
+    scanf("%[^\n]", s);
+    s = realloc(s, strlen(s) + 1);
+    //Write your logic to print the tokens of the sentence here.
+    k = 0;
+    //*(s + strlen(s) + 10) = '\n';
+    for (i = 0; i < strlen(s); i++) {
+        if(isblank(*(s + i))) {
+            for(j = 0; j < strlen(arr)-1; j++){
+                printf("%c", arr[j]);
+            }
+            printf("\n");
+            
+            for(j = 0; j < strlen(arr); j++){
+                arr[j] = "NULL";
+                //printf("%c\n", arr[j]);
+            }
+            k = 0;
+        }
+        else {
+            arr[k] = *(s + i);
+            k++;
+            //printf("%c ", arr[i]);
+        }
+    }
+    
+    return 0;
+}

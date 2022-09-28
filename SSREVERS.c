@@ -15,5 +15,3 @@ void main(){
 	printf("%d", r);
 }
 
-
-
