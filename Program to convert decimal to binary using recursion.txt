@@ -20,5 +20,5 @@ int convert(int n, int rem[50], int i){
     for(j = 0; j <= i; j++){
         printf("%d", rem[i-j]);
     }
-    return(rem);
+    return(0);
 }

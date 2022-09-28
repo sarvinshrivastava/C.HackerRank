@@ -2,22 +2,15 @@
 #include <math.h>
 #include <string.h>
 void main() {
-    int n, k, i = 0, num = 0, d, j, g, flag = 0;
+    int num = 0, d, flag = 0;
+    long int n;
     printf("Enter no. in binary form:");
-    scanf("%d", &n);
-    k = n;
+    scanf("%ld", &n);
     while(n > 0){
         d = n % 10;
-        n = n / 10;
-        i++;
-    }
-    for(j = 0; j <= i; j++){
-        d = k % 10;
         if(d < 2){
-            g = pow(2, j);
-            //printf("%d", g);
-            num += d * g;
-            k /= 10;
+            num += d * 10;
+            n /= 10;
             flag = 0;
         }
         else{
