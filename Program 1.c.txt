@@ -10,7 +10,6 @@ int main()
   	// Complete the code.
     for(i = a; i <= b; i++)
     {
-
          if (i == 1){
              printf("one\n");
          }
