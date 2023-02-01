@@ -2,10 +2,9 @@
 
 struct time_st {
     int hour, min, sec;
-};
+}tst;
 
 void main() {
-    struct time_st tst;
     scanf("%d%d%d", &tst.hour, &tst.min, &tst.sec);
     tst.sec += 1;
     if(tst.sec == 60) {
